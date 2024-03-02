@@ -7,6 +7,7 @@ import cors from "cors";
 import hospitalRoutes from "./Routes/hospitals.js";
 import campaignRoutes from "./Routes/campaign.js";
 import userRoutes from "./Routes/user.js";
+import camp from "./Routes/campaignform.js"
 
 dotenv.config();
 const app = express();
@@ -18,6 +19,7 @@ app.use(cors());
 app.use("/user", userRoutes);
 app.use("/hospital", hospitalRoutes);
 app.use("/campaign", campaignRoutes);
+app.use("/", camp);
 
 const PORT = process.env.PORT || 9000;
 mongoose
