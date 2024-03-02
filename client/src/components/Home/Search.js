@@ -46,7 +46,7 @@ const Search = () => {
 
       const data = await response.json();
       navigate("/hospitals", {
-        state: { formData: { city, bloodGroup }, fetchedData: data  },
+        state: { formData: { city, bloodGroup }, fetchedData: data },
       });
     } catch (err) {
       console.error(err);

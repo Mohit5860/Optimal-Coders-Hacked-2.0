@@ -7,19 +7,21 @@ import HospitalPage from "./Container/HospitalPage";
 import CampaignPage from "./Container/CampaignPage";
 import Register from "./components/login/Register";
 import Profile from "./components/login/Profile";
-import HospitalForm from "./components/Data/HospitalForm"
+import HospitalForm from "./components/Data/HospitalForm";
+import CampaignForm from "./components/Data/CampaignForm";
+import CampaignDetails from "./components/campaign/CampaignDetails";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route element={<Layout />}>
-            <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
             <Route path="/hospitals" element={<HospitalPage />} />
             <Route path="campaigns" element={<CampaignPage />} />
             <Route path="profile" element={<Profile />} />
-            <Route path="/hospital/form" element={<HospitalForm />} />
+            <Route path="campaign-details" element={<CampaignDetails />} />
           </Route>
           <Route path="/signin" element={<Signin />} />
           <Route path="/register" element={<Register />} />

@@ -1,10 +1,11 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const Header = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex justify-between shadow-lg mx-5">
+    <div className="flex justify-between shadow-lg mx-5 ">
       <h1 className="text-3xl text-red-600 m-2 p-2 font-bold">BloodUnity</h1>
       {localStorage.getItem("token") ? (
         <img
