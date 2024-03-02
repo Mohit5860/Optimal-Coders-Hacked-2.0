@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import {
   Link,
@@ -9,10 +10,22 @@ import {
 
 const Signin = () => {
   const navigate = useNavigate();
-  const location = useLocation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errMsg, setErrMsg] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post("http://localhost:5000/user/signin", {
+        email,
+        password
+      });
+      localStorage.setItem("token", res.data.id);
+      navigate("/");
+    }catch (err) {
+      console.error(err);
+    }
+  }
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -23,7 +36,7 @@ const Signin = () => {
             Login
           </h2>
           
-          <form className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6">
             <div>
               <label
                 htmlFor="email"

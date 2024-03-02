@@ -1,14 +1,14 @@
 import React from "react";
 import Search from "../components/Home/Search";
-import Carousel from "../components/Carousal/Carousal";
+import Data from "../components/hospital/Data";
 
-const HomePage = () => {
+const HospitalPage = () => {
   return (
     <div>
       <Search />
-      <Carousel />
+      <Data />
     </div>
   );
 };
 
-export default HomePage;
+export default HospitalPage;
