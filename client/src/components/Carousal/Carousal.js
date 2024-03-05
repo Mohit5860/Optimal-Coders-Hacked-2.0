@@ -11,7 +11,7 @@ const Carousel = () => {
     return () => clearInterval(interval);
   }, []);
   const slides = [
-    "https://imgs.search.brave.com/uzTBDkV8cXd7vDWxe-fwZ05UPyDheS2OEoe-zrYwAuw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vZ29vZG1v/cm5pbmdsb3ZlcXVv/dGUuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIwLzEwL0Js/b29kLURvbmF0aW9u/LXF1b3Rlcy1Jcy1B/LUdyZWF0LUFjdC1P/Zi1LaW5kbmVzcy0z/LmpwZz9maXQ9MTAy/NCw1NzYmc3NsPTE",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Nh5QvbSW1cDw-TaNMJsSefp94Vfx0PvROA&usqp=CAU",
     "https://www.centurypa.com/images/blog/Blood%20donation.jpg",
     "https://www.citysqjb.com/images/whatshappening/website_posting.jpg",
   ];

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 const CampaignDetails = () => {
   const navigate = useNavigate();
   const handleClick = () => {
+    alert("Registered");
     navigate("/");
   };
   return (
@@ -42,7 +43,7 @@ const CampaignDetails = () => {
               multiple lives.
             </h2>
             <button
-              onclick={handleClick}
+              onClick={handleClick}
               className="border bg-blue-200 rounded-lg p-5 ml-96"
             >
               <p className="text-3xl">Register Now</p>

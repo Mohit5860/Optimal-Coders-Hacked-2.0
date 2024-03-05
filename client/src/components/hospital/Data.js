@@ -110,7 +110,7 @@ const Data = () => {
       name: "Bank",
       blood: [
         {
-          type: "AB-",
+          type: "AB+",
           units: 3,
         },
       ],
